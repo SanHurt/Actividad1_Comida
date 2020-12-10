@@ -102,10 +102,9 @@
             <TextBox Margin="3"
                      Text="{Binding Path=Imagen}"></TextBox>
             <TextBlock Margin="3">Tipo de comida</TextBlock>
-            <StackPanel>
+            <StackPanel x:Name="stackPanelComboBox">
                 <ComboBox x:Name="comboBox"
-                          SelectedItem="{Binding Path=Tipo}"
-                          ItemsSource="{Binding}">
+                          ItemsSource="{Binding Path=Tipo}">
                 </ComboBox>
             </StackPanel>
             <GroupBox Header="Alérgenos"

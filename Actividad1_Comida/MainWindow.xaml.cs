@@ -23,7 +23,7 @@ namespace Actividad1_Comida
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             stackpanel.DataContext = listBox.SelectedItem;
-            /*comboBox.ItemsSource = listBox.SelectedItem;*/
+            stackPanelComboBox.DataContext= listBox.SelectedItem;
         }
     }
 }
