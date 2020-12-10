@@ -40,6 +40,7 @@
                                 BorderThickness="1"
                                 Width="260"
                                 Margin="10"
+                                Height="290"
                                 Background="AliceBlue">
                             <StackPanel>
                                 <TextBlock Text="{Binding Nombre}"
@@ -47,6 +48,8 @@
                                 <Image Source="{Binding Imagen}"
                                        Grid.Row="1"
                                        Margin="10"
+                                       Width="200"
+                                       Height="200"
                                        Stretch="UniformToFill"></Image>
                                 <Grid Grid.Row="2">
                                     <Grid.ColumnDefinitions>
