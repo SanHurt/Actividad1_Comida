@@ -13,19 +13,17 @@ namespace Actividad1_Comida
     public partial class MainWindow : Window
     {
         private ObservableCollection<Plato> listaPlatos;
-        List<string> listaComboBox;
         public MainWindow()
         {
             InitializeComponent();
             listaPlatos = Plato.GetSamples(@"E:/\DAM\2DAM\DINT\UT5\Imagenes\");
             listBox.DataContext = listaPlatos; 
-            listaComboBox = new List<string>() { "Mexicana", "Americana", "China" };
-            comboBox.DataContext = listaComboBox;
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             stackpanel.DataContext = listBox.SelectedItem;
+            /*comboBox.ItemsSource = listBox.SelectedItem;*/
         }
     }
 }

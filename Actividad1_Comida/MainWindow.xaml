@@ -104,11 +104,12 @@
             <TextBlock Margin="3">Tipo de comida</TextBlock>
             <StackPanel>
                 <ComboBox x:Name="comboBox"
+                          SelectedItem="{Binding Path=Tipo}"
                           ItemsSource="{Binding}">
                 </ComboBox>
             </StackPanel>
             <GroupBox Header="Alérgenos"
-                      BorderBrush="Black"
+                      BorderBrush="Black" 
                       BorderThickness="1"
                       Margin="5">
                 <Grid>
