@@ -40,11 +40,13 @@
                                 BorderThickness="1"
                                 Width="260"
                                 Margin="10"
-                                Height="290"
+                                Height="300"
                                 Background="AliceBlue">
                             <StackPanel>
-                                <TextBlock Text="{Binding Nombre}"
-                                           Margin="10"></TextBlock>
+                                <Viewbox Height="50">
+                                    <TextBlock Text="{Binding Nombre}"
+                                               Margin="10"></TextBlock>
+                                </Viewbox>
                                 <Image Source="{Binding Imagen}"
                                        Grid.Row="1"
                                        Margin="10"
@@ -96,15 +98,16 @@
                     x:Name="stackpanel">
             <TextBlock Margin="3">Nombre del plato</TextBlock>
             <TextBox Margin="3"
-                     x:Name="textBoxNombre"
-                     Text="{Binding Path=Nombre}"></TextBox>
-            <TextBlock Margin="3">Foto del plato</TextBlock>
+                         x:Name="textBoxNombre"
+                         Text="{Binding Path=Nombre}"></TextBox>
+
+                <TextBlock Margin="3">Foto del plato</TextBlock>
             <TextBox Margin="3"
                      Text="{Binding Path=Imagen}"></TextBox>
             <TextBlock Margin="3">Tipo de comida</TextBlock>
             <StackPanel x:Name="stackPanelComboBox">
                 <ComboBox x:Name="comboBox"
-                          ItemsSource="{Binding Path=Tipo}">
+                          SelectedItem="{Binding Path=Tipo}">
                 </ComboBox>
             </StackPanel>
             <GroupBox Header="Alérgenos"

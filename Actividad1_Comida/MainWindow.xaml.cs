@@ -17,7 +17,9 @@ namespace Actividad1_Comida
         {
             InitializeComponent();
             listaPlatos = Plato.GetSamples(@"E:/\DAM\2DAM\DINT\UT5\Imagenes\");
-            listBox.DataContext = listaPlatos; 
+            List<string> listaComida = new List<string>() {"Americana", "Mexicana", "China" };
+            listBox.DataContext = listaPlatos;
+            comboBox.ItemsSource = listaComida;
         }
 
         private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
